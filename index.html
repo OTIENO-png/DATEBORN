@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>  
+        function ageCalculator() {  
+            var userinput = document.getElementById("DOB").value;  
+            var gender = document.getElementById("gender").value; 
+            var dob = new Date(userinput);  
+        
+            if(userinput==null || userinput=='') {  
+              document.getElementById("message").innerHTML = "**Choose a date please!";    
+              return false;   
+            } else {  
+              const d = new Date(dob);
+              const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+              let day = weekday[d.getDay()];
+              let male =  {Sunday:"Kwasi", Monday:"Kwadwo", Tuesday:"Kwabena", Wednesday:"Kwaku", Thursday:"Yaw",Friday:"Kofi",Saturday:"Kwame",};
+        
+              let female = {Sunday:"Akosua", Monday:"Adwoa", Tuesday:"Abenaa", Wednesday:"Akua", Thursday:"Yaa",Friday:"Afua",Saturday:"Ama",};
+        
+              if(gender == "Female"){
+                console.log(female[day])
+        
+              }else{
+                console.log(male[day])
+                
+              }
+        
+              
+            //calculate month difference from current date in time  
+            var month_diff = Date.now() - dob.getTime();  
+              
+            //convert the calculated difference in date format  
+            var age_dt = new Date(month_diff); 
+            
+              
+            //extract year from date      
+            var year = age_dt.getUTCFullYear();  
+              
+            //now calculate the age of the user  
+            var age = Math.abs(year - 1970);  
+              
+            //display the calculated age  
+            return document.getElementById("result").innerHTML =    
+                     "Age is: " + age + " years. ";  
+            }  
+        }  
+        </script> 
     <style>
     h1 {text-align: center;}
       p::first-letter {
@@ -16,7 +61,21 @@
 <body bgcolor="purple">
     <h1>Age calcutator.</h1>
     <p>This is an application which will enable one to enter the date,month and year which he/she is born and the apllication will calculate the age and will displaythe day of the week which that day falls before the name being translated to its Akan equivalent which is derived from Ghanian culture.</p>
-    
-    <script src="calendar.js"></script>
+    <center>  
+<!-- Choose a date and enter in input field -->  
+<b> Enter Date of Birth: <input type=date id = DOB> </b>  
+<center>
+    <b> select gender:</b> 
+    <select id ='gender'>
+      <option>Male</option>
+      <option>Female</option>
+  </select>
+</center>
+<span id = "message" style="color:red"> </span> <br><br>    
+  
+<!-- Choose a date and enter in input field -->  
+<button type="submit" onclick = "ageCalculator()"> Calculate age </button> <br><br>  
+<h3 style="color:32A80F" id="result" align="center"></h3>   
+</center>  
 </body>
 </html>
