@@ -14,6 +14,8 @@ Below are the steps needed to get Akan name.
 3. Click the submit button to see what your Akan name would be
 
 
+## Link:
+https://otieno-png.github.io/
 
 
 ###### LICENCE:COPYRIGHT (c) 2022,BRIAN OTIENO
