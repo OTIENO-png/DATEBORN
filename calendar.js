@@ -1,4 +1,4 @@
-function ageCalculator() {  
+function akan() {  
   var userinput = document.getElementById("DOB").value;  
   var gender = document.getElementById("gender").value; 
   var akanName;
