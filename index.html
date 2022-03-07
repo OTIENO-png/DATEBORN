@@ -3,6 +3,19 @@
 <head>
     <script src="calendar.js"> </script> 
     <style>
+    button {
+  background-color: gray; /* button color gray*/
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
     h1 {text-align: center;}
       p::first-letter {
   color: #ff0000;
@@ -14,7 +27,7 @@
     <title>OTIENO</title>
     
 </head>
-<body bgcolor="purple">
+<body bgcolor="blue">
     <h1>AKAN NAME GENERATOR.</h1>
     <p>It is an application that allows a user to get their Akan name. The user will need to enter their date of birth and gender. The application will compute the day of the week they were born from the date of birth and use it to output the Akan name depending on their gender.</p>
     <center>  
@@ -30,8 +43,8 @@
 <span id = "message" style="color:red"> </span> <br><br>    
   
 <!-- Choose a date and enter in input field -->  
-<button type="submit" onclick = "akan()"> SUBMIT </button> <br><br>  
-<h3 style="color:32A80F" id="result" align="center"></h3>   
+<button type="submit" onclick = "akan()" style="color:green"> SUBMIT </button> <br><br>  
+<h3 style="color:black" id="result" align="center"></h3>   
 </center>  
 </body>
 </html>
