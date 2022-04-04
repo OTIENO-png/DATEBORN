@@ -3,37 +3,59 @@
 <head>
     <script src="calendar.js"> </script> 
     <style>
-      
-    button {
-        button.normal { backgroundColor:"#9933ff"; }
-  background-color: ; /* button color gray*/
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+      button{
+        background-color: aqua;
+        color: black;
+        border-radius: 10px;
+      }
+        form{
+           /* background-color: blue;*/
+            align-items: center;
+            text-align: center;
+            margin: auto;width: 380px;
+        }
+        fieldset{
+            list-style-type: circle;
+            color: rgb(44, 39, 39);
+            border-radius: 25%;
+            border:1px solid chocolate;
+        }
+       body {
+        background-image: url("afr.jpg"), url("afr.jpg");
+        background-color: #cccccc;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+      p{
+        color: blue;
+        font-weight: bolder;
+      }
 
 
     h1 {text-align: center;}
       p::first-letter {
-  color: #ff0000;
-  font-size: xx-large;
-    </style>
+     color: #ff0000;
+      font-size: xx-large;
+   </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTIENO</title>
     
 </head>
-<body bgcolor="blue">
+<body>
+  
     <h1>AKAN NAME GENERATOR.</h1>
-    <p>It is an application that allows a user to get their Akan name. The user will need to enter their date of birth and gender. The application will compute the day of the week they were born from the date of birth and use it to output the Akan name depending on their gender.</p>
-    <center>  
+    <form
+      <fieldset>
+        <p>It is an application that allows a user to get their Akan name. The user will need to enter their date of birth and
+          gender. The application will compute the day of the week they were born from the date of birth and use it to output
+          the Akan name depending on their gender.</p>
+        </fieldset>
+      
+      </form>
+  <center>  
 <!-- Choose a date and enter in input field -->  
 <b> Enter Date of Birth: <input type=date id = DOB> </b>  
 <center>
@@ -47,6 +69,9 @@
   
 <!-- Choose a date and enter in input field -->  
 <button type="submit" onclick = "akan()" style="color:green"> SUBMIT </button> <br><br>  
+<center>
+  <button onClick="window.location.reload();" id="refresh">REFRESH </button>
+</center>
 <h3 style="color:black" id="result" align="center"></h3>   
 </center>  
 </body>
